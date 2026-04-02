@@ -22,9 +22,11 @@ def call() {
                 }
             }
 
+            // ✅ ONLY CHANGE THIS PART
             stage('Deploy') {
                 steps {
-                    echo 'Deploying app...'
+                    sh 'docker build -t myapp .'
+                    sh 'docker run -d -p 8081:80 myapp'
                 }
             }
 
