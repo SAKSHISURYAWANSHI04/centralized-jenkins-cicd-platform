@@ -22,7 +22,6 @@ def call() {
                 }
             }
 
-            // ✅ ONLY CHANGE THIS PART
             stage('Deploy') {
                 steps {
                     sh 'docker build -t myapp .'
